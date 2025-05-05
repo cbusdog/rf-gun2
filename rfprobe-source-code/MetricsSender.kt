@@ -11,7 +11,7 @@ object MetricsSender {
         val client = OkHttpClient()
         val body = RequestBody.create(MediaType.get("application/json"), json)
         val request = Request.Builder()
-            .url("https://api.datadoghq.com/api/v2/series")
+            .url("https://api.us3.datadoghq.com/api/v2/series")
             .addHeader("DD-API-KEY", apiKey)
             .post(body)
             .build()
